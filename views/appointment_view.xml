@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
-
     <record id="view_hospital_appointment_tree" model="ir.ui.view">
         <field name="name">hospital.appointment.tree</field>
         <field name="model">hospital.appointment</field>
@@ -29,7 +28,15 @@
         <field name="model">hospital.appointment</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <field name="state" widget="statusbar" nolabel="1" options="{'clickable':'1'}" statusbar_visible="draft,done,in_consulation"/>
+                </header>
                 <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field class="mr-3" name="priority" widget="priority"/>
+                        </h1>
+                    </div>
                     <group>
                         <field name="patient_id"></field>
                         <field name="ref"></field>
@@ -37,7 +44,7 @@
                     </group>
                     <notebook>
                         <page string="Prescription">
-                            <field placeholder="Enter your prescription..." name="prescription"/>
+                            <field placeholder="Enter your prescription...!" name="prescription"/>
                         </page>
                         <page string="Pharnacy">
                             <group>
