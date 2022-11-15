@@ -9,6 +9,11 @@
                 <field name="patient_id"></field>
                 <field name="appointment_time"></field>
                 <field name="booking_date"></field>
+                <field name="state" widget="badge"
+                       decoration-success="state=='done'"
+                       decoration-info="state=='draft'"
+                       decoration-danger="state=='cancel'"
+                       decoration-warning="state=='in_consultation'"/>
             </tree>
         </field>
     </record>
@@ -29,7 +34,8 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="state" widget="statusbar" nolabel="1" options="{'clickable':'1'}" statusbar_visible="draft,done,in_consulation"/>
+                    <field name="state" widget="statusbar" nolabel="1" options="{'clickable':'1'}"
+                           statusbar_visible="draft,done,in_consultation"/>
                 </header>
                 <sheet>
                     <div class="oe_title">
@@ -38,9 +44,15 @@
                         </h1>
                     </div>
                     <group>
-                        <field name="patient_id"></field>
-                        <field name="ref"></field>
-                        <field name="appointment_time"></field>
+                        <field name="patient_id"/>
+                        <field name="ref" help="Mã số bệnh nhân"/>
+                        <field name="appointment_time"/>
+                    </group>
+                    <group>
+                        <button name="action_test" string="Object button" type="object" class="oe_highlight"/>
+                        <button confirm="Are you sure?" help="Click to redirect to Patient records!"
+                                name="%(om_hospital.action_hospital_patient)d" string="Action button" type="action"
+                                class="oe_highlight"/>
                     </group>
                     <notebook>
                         <page string="Prescription">

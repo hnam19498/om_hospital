@@ -14,8 +14,20 @@ class HospitalAppointment(models.Model):
     ref = fields.Char(string='Reference')
     prescription = fields.Html(string='Prescription')
     priority = fields.Selection([('0', 'Normal'), ('1', 'Low'), ('2', 'High'), ('3', 'Very high')], string='Priority')
-    state = fields.Selection([('draft', 'Draft'), ('in_consulation', 'In consulation'), ('done', 'Done'), ('cancel', 'Cancel')], default='draft', required=True, string='Status')
+    state = fields.Selection(
+        [('draft', 'Draft'), ('in_consultation', 'In consultation'), ('done', 'Done'), ('cancel', 'Cancel')],
+        default='draft', required=True, string='Status')
 
     @api.onchange('patient_id')
     def onchange_patient_id(self):
         self.ref = self.patient_id.ref
+
+    def action_test(self):
+        print('Button clicked!!!')
+        return {
+            'effect': {
+                'fadeout': 'slow',
+                'message': "ahihi",
+                'type': "rainbow_man",
+            }
+        }

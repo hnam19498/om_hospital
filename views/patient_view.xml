@@ -27,8 +27,8 @@
                 <filter name="filter_male" string="Male" domain="[('gender', '=', 'male')]"></filter>
                 <filter name="filter_female" string="Female" domain="[('gender', '=', 'female')]"></filter>
                 <separator/>
-<!--                <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=', 12)]"></filter>-->
-<!--                <separator/>-->
+                <!--                <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=', 12)]"></filter>-->
+                <!--                <separator/>-->
                 <filter name="filter_achived" string="Achived" domain="[('active', '=', False)]"></filter>
                 <group expand="0" string="Group by">
                     <filter string="Gender" name="group_by_gender" context="{'group_by':'gender'}"></filter>
