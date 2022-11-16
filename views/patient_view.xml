@@ -11,6 +11,7 @@
                 <field name="ref" string="Reference"></field>
                 <field name="age"></field>
                 <field name="gender"></field>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </tree>
         </field>
     </record>
@@ -56,7 +57,7 @@
                     <group>
                         <field name="ref"></field>
                         <field name="gender"></field>
-                        <field name="tag_ids" widget="many2many_tags"></field>
+                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                         <field name="active" invisible="1"></field>
                     </group>
                 </sheet>
