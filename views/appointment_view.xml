@@ -118,7 +118,7 @@
     <!--    <menuitem id="menu_patient_master" name="Patient details" parent="menu_hospital_root" sequence="0"/>-->
     <menuitem id="menu_appointment"
               name="Appointment"
-              parent="menu_patient_master"
+              parent="menu_hospital_root"
               action="action_hospital_appointment"
-              sequence="10"/>
+              sequence="30"/>
 </odoo>

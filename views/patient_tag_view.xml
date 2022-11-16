@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" string="Name"/>
+                <field name="color" string="Color" widget="color"/>
                 <field name="active" string="Active"/>
             </tree>
         </field>
@@ -22,6 +23,7 @@
                             <field name="name" string="Name"/>
                         </group>
                         <group>
+                            <field name="color" widget="color"/>
                             <field name="active" string="Active" widget="boolean_toggle"/>
                         </group>
                     </group>
