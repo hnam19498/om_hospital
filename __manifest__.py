@@ -6,7 +6,7 @@
     'author': "hnam",
     'sequence': -100,
     'version': '2.0',
-    'depends': ['mail'],
+    'depends': ['mail', 'product'],
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
