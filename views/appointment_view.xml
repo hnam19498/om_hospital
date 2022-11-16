@@ -94,7 +94,7 @@
                     <notebook>
                         <page string="Prescription">
                             <field placeholder="Enter your prescription...!" name="prescription"
-                                   options="{'collaborative': true, 'resizable': true}"/>
+                                   options="{'collaborative': true, 'resizable': true, 'codeview': true}"/>
                         </page>
                         <page string="Pharmacy" name="pharmacy">
                             <group>
