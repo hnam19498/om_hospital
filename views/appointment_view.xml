@@ -10,13 +10,16 @@
                   decoration-danger="state=='cancel'"
                   decoration-warning="state=='in_consultation'">
                 <field name="patient_id"></field>
+                <field name="doctor_id" widget="many2one_avatar_user"></field>
                 <field name="appointment_time"></field>
-                <field name="booking_date"></field>
+                <field name="booking_date" optional="show"></field>
+                <field name="activity_ids" widget="list_activity"/>
                 <field name="state" widget="badge"
                        decoration-success="state=='done'"
                        decoration-info="state=='draft'"
                        decoration-danger="state=='cancel'"
-                       decoration-warning="state=='in_consultation'"/>
+                       decoration-warning="state=='in_consultation'"
+                       optional="hide"/>
             </tree>
         </field>
     </record>
@@ -48,6 +51,7 @@
                     </div>
                     <group>
                         <field name="patient_id"/>
+                        <field name="doctor_id" widget="many2one_avatar"/>
                         <field name="ref" help="Mã số bệnh nhân"/>
                         <field name="appointment_time"/>
                     </group>
@@ -59,7 +63,8 @@
                     </group>
                     <notebook>
                         <page string="Prescription">
-                            <field placeholder="Enter your prescription...!" name="prescription"/>
+                            <field placeholder="Enter your prescription...!" name="prescription"
+                                   options="{'collaborative': true, 'resizable': true}"/>
                         </page>
                         <page string="Pharnacy">
                             <group>
