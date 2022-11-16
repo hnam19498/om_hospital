@@ -52,7 +52,7 @@
                     <group>
                         <field name="patient_id"/>
                         <field name="doctor_id" widget="many2one_avatar"/>
-                        <field name="ref" help="Mã số bệnh nhân"/>
+                        <field name="ref" help="Mã số bệnh nhân" default_focus="1"/>
                         <field name="appointment_time"/>
                     </group>
                     <group>
