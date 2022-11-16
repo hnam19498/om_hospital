@@ -18,7 +18,7 @@
     <menuitem id="menu_patient_master"
               name="Patient details"
               parent="menu_hospital_root"
-              sequence="0"/>
+              sequence="20"/>
 
     <menuitem id="menu_patient"
               name="Patient"
@@ -31,5 +31,10 @@
               parent="menu_patient_master"
               action="action_hospital_female_patient"
               sequence="20"/>
+
+    <menuitem id="menu_configuration"
+              name="Configurations"
+              parent="menu_hospital_root"
+              sequence="100"/>
 
 </odoo>
