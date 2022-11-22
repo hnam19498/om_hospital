@@ -65,8 +65,9 @@
                             class="oe_highlight"/>
                     <button name="action_done" string="Mark as done" type="object" states="in_consultation"
                             class="oe_highlight"/>
-                    <button name="action_cancel" string="Cancel" type="object" states="draft,in_consultation"
-                            style="background-color: orange"/>
+                    <button name="%(om_hospital.action_cancel_appointment)d" string="Cancel" type="action"
+                            states="draft,in_consultation" style="background-color: orange"
+                            context="{'default_reason': 'abc'}"/>
                     <button name="action_draft" string="Reset to draft" type="object" states="cancel"
                             class="oe_highlight"/>
                     <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,done,in_consultation"/>
@@ -87,7 +88,8 @@
                     </group>
                     <group>
                         <button name="action_test" string="Object button" type="object" class="oe_highlight"/>
-                        <button confirm="Are you sure redirect to Patient records!?" help="Click to redirect to Patient records!"
+                        <button confirm="Are you sure redirect to Patient records!?"
+                                help="Click to redirect to Patient records!"
                                 name="%(om_hospital.action_hospital_patient)d" string="Action button" type="action"
                                 class="oe_highlight"/>
                     </group>

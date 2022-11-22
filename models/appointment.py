@@ -47,8 +47,8 @@ class HospitalAppointment(models.Model):
             h.state = 'draft'
 
     def action_cancel(self):
-        for h in self:
-            h.state = 'cancel'
+        action = self.env.ref('om_hospital.action_cancel_appointment').read()[0]
+        return action
 
 class AppointmentPharmacyLines(models.Model):
     _name = "appointment.pharmacy.lines"
