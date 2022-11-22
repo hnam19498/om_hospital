@@ -87,7 +87,7 @@
                     </group>
                     <group>
                         <button name="action_test" string="Object button" type="object" class="oe_highlight"/>
-                        <button confirm="Are you sure?" help="Click to redirect to Patient records!"
+                        <button confirm="Are you sure redirect to Patient records!?" help="Click to redirect to Patient records!"
                                 name="%(om_hospital.action_hospital_patient)d" string="Action button" type="action"
                                 class="oe_highlight"/>
                     </group>
@@ -136,9 +136,5 @@
     </record>
     <!--    <menuitem id="menu_hospital_root" name="Hospital" sequence="0"/>-->
     <!--    <menuitem id="menu_patient_master" name="Patient details" parent="menu_hospital_root" sequence="0"/>-->
-    <menuitem id="menu_appointment"
-              name="Appointment"
-              parent="menu_hospital_root"
-              action="action_hospital_appointment"
-              sequence="30"/>
+
 </odoo>
