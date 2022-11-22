@@ -8,7 +8,15 @@
             <form>
                 <group>
                     <field name="appointment_id"/>
+                    <field name="reason"/>
                 </group>
+                <group>
+                    <field name="date_cancel"/>
+                </group>
+                <footer>
+                    <button name="action_cancel" class="btn-secondary" string="Cancel appointment" type="object"></button>
+                    <button class="btn-primary" string="Discard" special="cancel"></button>
+                </footer>
             </form>
         </field>
     </record>
@@ -18,22 +26,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">cancel.appointment.wizard</field>
         <field name="view_mode">form</field>
+        <field name="target">new</field>
     </record>
-
-    <menuitem id="menu_appointment_master"
-              name="Appointment details"
-              parent="menu_hospital_root"
-              sequence="15"/>
-
-    <menuitem id="menu_appointment"
-              name="Appointments"
-              parent="menu_appointment_master"
-              action="action_hospital_appointment"
-              sequence="20"/>
-
-    <menuitem id="menu_cancel_appointment"
-              name="Cancellation"
-              parent="menu_appointment_master"
-              sequence="25"/>
 
 </odoo>
