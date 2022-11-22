@@ -35,3 +35,11 @@ class HospitalPatient(models.Model):
                 h.age = today.year - h.date_of_birth.year
             else:
                 h.age = 1
+
+    def name_get(self):
+        patient_list = []
+        for rec in self:
+            name = f'[{rec.ref}] {rec.name}'
+            patient_list.append((rec.id, name))
+
+        return patient_list
